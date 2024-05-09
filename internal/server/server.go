@@ -8,6 +8,7 @@ import (
 
 func StartServer(config config.Config) {
 	log.Println("Starting server...")
+	log.Println("Listening on port", config.API.Port)
 
 	err := http.ListenAndServe(config.API.Port, nil)
 	if err != nil {
